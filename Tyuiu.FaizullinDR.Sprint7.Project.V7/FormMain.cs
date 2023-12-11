@@ -16,5 +16,7 @@ namespace Tyuiu.FaizullinDR.Sprint7.Project.V7
         {
             InitializeComponent();
         }
+
+
     }
 }
