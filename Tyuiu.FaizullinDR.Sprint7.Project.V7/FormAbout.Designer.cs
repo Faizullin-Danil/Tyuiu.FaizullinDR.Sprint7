@@ -32,6 +32,7 @@ namespace Tyuiu.FaizullinDR.Sprint7.Project.V7
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAbout));
             this.pictureBoxMyPhoto_FDR = new System.Windows.Forms.PictureBox();
             this.labelInfo_FDR = new System.Windows.Forms.Label();
+            this.buttonOK_FDR = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMyPhoto_FDR)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,11 +55,22 @@ namespace Tyuiu.FaizullinDR.Sprint7.Project.V7
             this.labelInfo_FDR.TabIndex = 7;
             this.labelInfo_FDR.Text = resources.GetString("labelInfo_FDR.Text");
             // 
+            // buttonOK_FDR
+            // 
+            this.buttonOK_FDR.Location = new System.Drawing.Point(602, 165);
+            this.buttonOK_FDR.Name = "buttonOK_FDR";
+            this.buttonOK_FDR.Size = new System.Drawing.Size(75, 23);
+            this.buttonOK_FDR.TabIndex = 8;
+            this.buttonOK_FDR.Text = "OK";
+            this.buttonOK_FDR.UseVisualStyleBackColor = true;
+            this.buttonOK_FDR.Click += new System.EventHandler(this.buttonOK_FDR_Click);
+            // 
             // FormAbout
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(705, 200);
+            this.Controls.Add(this.buttonOK_FDR);
             this.Controls.Add(this.labelInfo_FDR);
             this.Controls.Add(this.pictureBoxMyPhoto_FDR);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -77,5 +89,6 @@ namespace Tyuiu.FaizullinDR.Sprint7.Project.V7
 
         private System.Windows.Forms.PictureBox pictureBoxMyPhoto_FDR;
         private System.Windows.Forms.Label labelInfo_FDR;
+        private System.Windows.Forms.Button buttonOK_FDR;
     }
 }

@@ -16,5 +16,10 @@ namespace Tyuiu.FaizullinDR.Sprint7.Project.V7
         {
             InitializeComponent();
         }
+
+        private void buttonOK_FDR_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -71,10 +71,6 @@ namespace Tyuiu.FaizullinDR.Sprint7.Project.V7
 
                     MessageBox.Show("Новый житель зарегистрирован!", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-
-                
-
-
             }
         }
 
@@ -103,9 +99,6 @@ namespace Tyuiu.FaizullinDR.Sprint7.Project.V7
                     dataGridViewInfoFlat_FDR.Rows[r].Cells[c].Value = DataMatrix[r, c];
                 }
             }
-
-
-
         }
 
         private void buttonInfo_FDR_Click(object sender, EventArgs e)
