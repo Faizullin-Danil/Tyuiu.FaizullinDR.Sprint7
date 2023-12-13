@@ -18,7 +18,7 @@ namespace Tyuiu.FaizullinDR.Sprint7.Project.V7.Lib
             
             string[,] matrix = new string[rows, columns];
 
-            for (int i = 1; i < str.Length; i++)
+            for (int i = 0; i < str.Length; i++)
             {
                 string strIndexI = str[i];
                 string[] strArr = strIndexI.Split(';');

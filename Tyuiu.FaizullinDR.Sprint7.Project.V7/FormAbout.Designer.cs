@@ -51,7 +51,7 @@ namespace Tyuiu.FaizullinDR.Sprint7.Project.V7
             this.labelInfo_FDR.AutoSize = true;
             this.labelInfo_FDR.Location = new System.Drawing.Point(173, 12);
             this.labelInfo_FDR.Name = "labelInfo_FDR";
-            this.labelInfo_FDR.Size = new System.Drawing.Size(488, 153);
+            this.labelInfo_FDR.Size = new System.Drawing.Size(488, 170);
             this.labelInfo_FDR.TabIndex = 7;
             this.labelInfo_FDR.Text = resources.GetString("labelInfo_FDR.Text");
             // 
