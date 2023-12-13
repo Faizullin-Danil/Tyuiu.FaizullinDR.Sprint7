@@ -39,27 +39,36 @@ namespace Tyuiu.FaizullinDR.Sprint7.Project.V7
             this.labelSumRoom_FDR = new System.Windows.Forms.Label();
             this.labelFlatArea_FDR = new System.Windows.Forms.Label();
             this.labelSumPeople_FDR = new System.Windows.Forms.Label();
-            this.labelFlat_FDR = new System.Windows.Forms.Label();
-            this.labelEntrance_FDR = new System.Windows.Forms.Label();
+            this.labelAddFlat_FDR = new System.Windows.Forms.Label();
+            this.labelAddEntrance_FDR = new System.Windows.Forms.Label();
             this.labelFIO_FDR = new System.Windows.Forms.Label();
             this.radioButtonRent_FDR = new System.Windows.Forms.RadioButton();
             this.radioButtonBuy_FDR = new System.Windows.Forms.RadioButton();
             this.textBoxSumPeople_FDR = new System.Windows.Forms.TextBox();
             this.textBoxFlatArea_FDR = new System.Windows.Forms.TextBox();
             this.textBoxSumRoom_FDR = new System.Windows.Forms.TextBox();
-            this.textBoxEntrance_FDR = new System.Windows.Forms.TextBox();
-            this.textBoxFlat_FDR = new System.Windows.Forms.TextBox();
+            this.textBoxAddEntrance_FDR = new System.Windows.Forms.TextBox();
+            this.textBoxAddFlat_FDR = new System.Windows.Forms.TextBox();
             this.textBoxFIO_FDR = new System.Windows.Forms.TextBox();
             this.buttonInfo_FDR = new System.Windows.Forms.Button();
-            this.saveFileDialogNewCitizen_FDR = new System.Windows.Forms.SaveFileDialog();
-            this.groupBoxBriefSummary_FDR = new System.Windows.Forms.GroupBox();
+            this.openFileDialogInfoFlat_FDR = new System.Windows.Forms.OpenFileDialog();
+            this.groupBoxEvection_FDR = new System.Windows.Forms.GroupBox();
+            this.labelDeleteEntrance_FDR = new System.Windows.Forms.Label();
+            this.labelDeleteFlat_FDR = new System.Windows.Forms.Label();
+            this.textBoxDeleteFlat_FDR = new System.Windows.Forms.TextBox();
+            this.textBoxDeleteEntrance_FDR = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBoxInfoFlat_FDR.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInfoFlat_FDR)).BeginInit();
             this.groupBoxReg_FDR.SuspendLayout();
+            this.groupBoxEvection_FDR.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBoxInfoFlat_FDR
             // 
+            this.groupBoxInfoFlat_FDR.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBoxInfoFlat_FDR.Controls.Add(this.dataGridViewInfoFlat_FDR);
             this.groupBoxInfoFlat_FDR.Location = new System.Drawing.Point(12, 103);
             this.groupBoxInfoFlat_FDR.Name = "groupBoxInfoFlat_FDR";
@@ -70,6 +79,9 @@ namespace Tyuiu.FaizullinDR.Sprint7.Project.V7
             // 
             // dataGridViewInfoFlat_FDR
             // 
+            this.dataGridViewInfoFlat_FDR.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewInfoFlat_FDR.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewInfoFlat_FDR.ColumnHeadersVisible = false;
             this.dataGridViewInfoFlat_FDR.Location = new System.Drawing.Point(6, 21);
@@ -82,34 +94,38 @@ namespace Tyuiu.FaizullinDR.Sprint7.Project.V7
             // 
             // buttonOpenFile_FDR
             // 
+            this.buttonOpenFile_FDR.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonOpenFile_FDR.Image = ((System.Drawing.Image)(resources.GetObject("buttonOpenFile_FDR.Image")));
             this.buttonOpenFile_FDR.Location = new System.Drawing.Point(12, 12);
             this.buttonOpenFile_FDR.Name = "buttonOpenFile_FDR";
-            this.buttonOpenFile_FDR.Size = new System.Drawing.Size(121, 73);
+            this.buttonOpenFile_FDR.Size = new System.Drawing.Size(570, 73);
             this.buttonOpenFile_FDR.TabIndex = 0;
             this.buttonOpenFile_FDR.UseVisualStyleBackColor = true;
+            this.buttonOpenFile_FDR.Click += new System.EventHandler(this.buttonOpenFile_FDR_Click);
             // 
             // groupBoxReg_FDR
             // 
+            this.groupBoxReg_FDR.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBoxReg_FDR.Controls.Add(this.labelBuyOrRent_FDR);
             this.groupBoxReg_FDR.Controls.Add(this.buttonSaveFile_FDR);
             this.groupBoxReg_FDR.Controls.Add(this.labelSumRoom_FDR);
             this.groupBoxReg_FDR.Controls.Add(this.labelFlatArea_FDR);
             this.groupBoxReg_FDR.Controls.Add(this.labelSumPeople_FDR);
-            this.groupBoxReg_FDR.Controls.Add(this.labelFlat_FDR);
-            this.groupBoxReg_FDR.Controls.Add(this.labelEntrance_FDR);
+            this.groupBoxReg_FDR.Controls.Add(this.labelAddFlat_FDR);
+            this.groupBoxReg_FDR.Controls.Add(this.labelAddEntrance_FDR);
             this.groupBoxReg_FDR.Controls.Add(this.labelFIO_FDR);
             this.groupBoxReg_FDR.Controls.Add(this.radioButtonRent_FDR);
             this.groupBoxReg_FDR.Controls.Add(this.radioButtonBuy_FDR);
             this.groupBoxReg_FDR.Controls.Add(this.textBoxSumPeople_FDR);
             this.groupBoxReg_FDR.Controls.Add(this.textBoxFlatArea_FDR);
             this.groupBoxReg_FDR.Controls.Add(this.textBoxSumRoom_FDR);
-            this.groupBoxReg_FDR.Controls.Add(this.textBoxEntrance_FDR);
-            this.groupBoxReg_FDR.Controls.Add(this.textBoxFlat_FDR);
+            this.groupBoxReg_FDR.Controls.Add(this.textBoxAddEntrance_FDR);
+            this.groupBoxReg_FDR.Controls.Add(this.textBoxAddFlat_FDR);
             this.groupBoxReg_FDR.Controls.Add(this.textBoxFIO_FDR);
             this.groupBoxReg_FDR.Location = new System.Drawing.Point(621, 103);
             this.groupBoxReg_FDR.Name = "groupBoxReg_FDR";
-            this.groupBoxReg_FDR.Size = new System.Drawing.Size(709, 211);
+            this.groupBoxReg_FDR.Size = new System.Drawing.Size(709, 262);
             this.groupBoxReg_FDR.TabIndex = 1;
             this.groupBoxReg_FDR.TabStop = false;
             this.groupBoxReg_FDR.Text = "Регистрация новых жильцов:";
@@ -117,11 +133,11 @@ namespace Tyuiu.FaizullinDR.Sprint7.Project.V7
             // labelBuyOrRent_FDR
             // 
             this.labelBuyOrRent_FDR.AutoSize = true;
-            this.labelBuyOrRent_FDR.Location = new System.Drawing.Point(599, 21);
+            this.labelBuyOrRent_FDR.Location = new System.Drawing.Point(6, 126);
             this.labelBuyOrRent_FDR.Name = "labelBuyOrRent_FDR";
-            this.labelBuyOrRent_FDR.Size = new System.Drawing.Size(36, 17);
+            this.labelBuyOrRent_FDR.Size = new System.Drawing.Size(119, 17);
             this.labelBuyOrRent_FDR.TabIndex = 14;
-            this.labelBuyOrRent_FDR.Text = "пол:";
+            this.labelBuyOrRent_FDR.Text = "Покупка/аренда:";
             // 
             // buttonSaveFile_FDR
             // 
@@ -160,23 +176,23 @@ namespace Tyuiu.FaizullinDR.Sprint7.Project.V7
             this.labelSumPeople_FDR.TabIndex = 11;
             this.labelSumPeople_FDR.Text = "Кол-во заселяющихся:";
             // 
-            // labelFlat_FDR
+            // labelAddFlat_FDR
             // 
-            this.labelFlat_FDR.AutoSize = true;
-            this.labelFlat_FDR.Location = new System.Drawing.Point(477, 21);
-            this.labelFlat_FDR.Name = "labelFlat_FDR";
-            this.labelFlat_FDR.Size = new System.Drawing.Size(122, 17);
-            this.labelFlat_FDR.TabIndex = 10;
-            this.labelFlat_FDR.Text = "Номер квартиры:";
+            this.labelAddFlat_FDR.AutoSize = true;
+            this.labelAddFlat_FDR.Location = new System.Drawing.Point(477, 21);
+            this.labelAddFlat_FDR.Name = "labelAddFlat_FDR";
+            this.labelAddFlat_FDR.Size = new System.Drawing.Size(122, 17);
+            this.labelAddFlat_FDR.TabIndex = 10;
+            this.labelAddFlat_FDR.Text = "Номер квартиры:";
             // 
-            // labelEntrance_FDR
+            // labelAddEntrance_FDR
             // 
-            this.labelEntrance_FDR.AutoSize = true;
-            this.labelEntrance_FDR.Location = new System.Drawing.Point(250, 21);
-            this.labelEntrance_FDR.Name = "labelEntrance_FDR";
-            this.labelEntrance_FDR.Size = new System.Drawing.Size(123, 17);
-            this.labelEntrance_FDR.TabIndex = 9;
-            this.labelEntrance_FDR.Text = "Номер подъезда:";
+            this.labelAddEntrance_FDR.AutoSize = true;
+            this.labelAddEntrance_FDR.Location = new System.Drawing.Point(250, 21);
+            this.labelAddEntrance_FDR.Name = "labelAddEntrance_FDR";
+            this.labelAddEntrance_FDR.Size = new System.Drawing.Size(123, 17);
+            this.labelAddEntrance_FDR.TabIndex = 9;
+            this.labelAddEntrance_FDR.Text = "Номер подъезда:";
             // 
             // labelFIO_FDR
             // 
@@ -191,7 +207,7 @@ namespace Tyuiu.FaizullinDR.Sprint7.Project.V7
             // radioButtonRent_FDR
             // 
             this.radioButtonRent_FDR.AutoSize = true;
-            this.radioButtonRent_FDR.Location = new System.Drawing.Point(602, 66);
+            this.radioButtonRent_FDR.Location = new System.Drawing.Point(9, 171);
             this.radioButtonRent_FDR.Name = "radioButtonRent_FDR";
             this.radioButtonRent_FDR.Size = new System.Drawing.Size(77, 21);
             this.radioButtonRent_FDR.TabIndex = 7;
@@ -202,7 +218,7 @@ namespace Tyuiu.FaizullinDR.Sprint7.Project.V7
             // radioButtonBuy_FDR
             // 
             this.radioButtonBuy_FDR.AutoSize = true;
-            this.radioButtonBuy_FDR.Location = new System.Drawing.Point(602, 39);
+            this.radioButtonBuy_FDR.Location = new System.Drawing.Point(9, 144);
             this.radioButtonBuy_FDR.Name = "radioButtonBuy_FDR";
             this.radioButtonBuy_FDR.Size = new System.Drawing.Size(82, 21);
             this.radioButtonBuy_FDR.TabIndex = 6;
@@ -231,19 +247,19 @@ namespace Tyuiu.FaizullinDR.Sprint7.Project.V7
             this.textBoxSumRoom_FDR.Size = new System.Drawing.Size(122, 22);
             this.textBoxSumRoom_FDR.TabIndex = 3;
             // 
-            // textBoxEntrance_FDR
+            // textBoxAddEntrance_FDR
             // 
-            this.textBoxEntrance_FDR.Location = new System.Drawing.Point(250, 39);
-            this.textBoxEntrance_FDR.Name = "textBoxEntrance_FDR";
-            this.textBoxEntrance_FDR.Size = new System.Drawing.Size(221, 22);
-            this.textBoxEntrance_FDR.TabIndex = 2;
+            this.textBoxAddEntrance_FDR.Location = new System.Drawing.Point(250, 39);
+            this.textBoxAddEntrance_FDR.Name = "textBoxAddEntrance_FDR";
+            this.textBoxAddEntrance_FDR.Size = new System.Drawing.Size(221, 22);
+            this.textBoxAddEntrance_FDR.TabIndex = 2;
             // 
-            // textBoxFlat_FDR
+            // textBoxAddFlat_FDR
             // 
-            this.textBoxFlat_FDR.Location = new System.Drawing.Point(477, 39);
-            this.textBoxFlat_FDR.Name = "textBoxFlat_FDR";
-            this.textBoxFlat_FDR.Size = new System.Drawing.Size(122, 22);
-            this.textBoxFlat_FDR.TabIndex = 1;
+            this.textBoxAddFlat_FDR.Location = new System.Drawing.Point(477, 39);
+            this.textBoxAddFlat_FDR.Name = "textBoxAddFlat_FDR";
+            this.textBoxAddFlat_FDR.Size = new System.Drawing.Size(122, 22);
+            this.textBoxAddFlat_FDR.TabIndex = 1;
             // 
             // textBoxFIO_FDR
             // 
@@ -254,38 +270,94 @@ namespace Tyuiu.FaizullinDR.Sprint7.Project.V7
             // 
             // buttonInfo_FDR
             // 
+            this.buttonInfo_FDR.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonInfo_FDR.Image = ((System.Drawing.Image)(resources.GetObject("buttonInfo_FDR.Image")));
-            this.buttonInfo_FDR.Location = new System.Drawing.Point(1209, 12);
+            this.buttonInfo_FDR.Location = new System.Drawing.Point(1203, 12);
             this.buttonInfo_FDR.Name = "buttonInfo_FDR";
             this.buttonInfo_FDR.Size = new System.Drawing.Size(121, 73);
             this.buttonInfo_FDR.TabIndex = 3;
             this.buttonInfo_FDR.UseVisualStyleBackColor = true;
+            this.buttonInfo_FDR.Click += new System.EventHandler(this.buttonInfo_FDR_Click);
             // 
-            // groupBoxBriefSummary_FDR
+            // openFileDialogInfoFlat_FDR
             // 
-            this.groupBoxBriefSummary_FDR.Location = new System.Drawing.Point(621, 320);
-            this.groupBoxBriefSummary_FDR.Name = "groupBoxBriefSummary_FDR";
-            this.groupBoxBriefSummary_FDR.Size = new System.Drawing.Size(709, 331);
-            this.groupBoxBriefSummary_FDR.TabIndex = 4;
-            this.groupBoxBriefSummary_FDR.TabStop = false;
-            this.groupBoxBriefSummary_FDR.Text = "Краткая сводка дома:";
+            this.openFileDialogInfoFlat_FDR.FileName = "openFileDialog1";
+            // 
+            // groupBoxEvection_FDR
+            // 
+            this.groupBoxEvection_FDR.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBoxEvection_FDR.Controls.Add(this.button1);
+            this.groupBoxEvection_FDR.Controls.Add(this.labelDeleteEntrance_FDR);
+            this.groupBoxEvection_FDR.Controls.Add(this.labelDeleteFlat_FDR);
+            this.groupBoxEvection_FDR.Controls.Add(this.textBoxDeleteFlat_FDR);
+            this.groupBoxEvection_FDR.Controls.Add(this.textBoxDeleteEntrance_FDR);
+            this.groupBoxEvection_FDR.Location = new System.Drawing.Point(621, 371);
+            this.groupBoxEvection_FDR.Name = "groupBoxEvection_FDR";
+            this.groupBoxEvection_FDR.Size = new System.Drawing.Size(709, 102);
+            this.groupBoxEvection_FDR.TabIndex = 5;
+            this.groupBoxEvection_FDR.TabStop = false;
+            this.groupBoxEvection_FDR.Text = "Выселение жильцов:";
+            // 
+            // labelDeleteEntrance_FDR
+            // 
+            this.labelDeleteEntrance_FDR.AutoSize = true;
+            this.labelDeleteEntrance_FDR.Location = new System.Drawing.Point(322, 18);
+            this.labelDeleteEntrance_FDR.Name = "labelDeleteEntrance_FDR";
+            this.labelDeleteEntrance_FDR.Size = new System.Drawing.Size(123, 17);
+            this.labelDeleteEntrance_FDR.TabIndex = 10;
+            this.labelDeleteEntrance_FDR.Text = "Номер подъезда:";
+            // 
+            // labelDeleteFlat_FDR
+            // 
+            this.labelDeleteFlat_FDR.AutoSize = true;
+            this.labelDeleteFlat_FDR.Location = new System.Drawing.Point(6, 19);
+            this.labelDeleteFlat_FDR.Name = "labelDeleteFlat_FDR";
+            this.labelDeleteFlat_FDR.Size = new System.Drawing.Size(268, 17);
+            this.labelDeleteFlat_FDR.TabIndex = 9;
+            this.labelDeleteFlat_FDR.Text = "Номер квартиры из которой выселяют:";
+            // 
+            // textBoxDeleteFlat_FDR
+            // 
+            this.textBoxDeleteFlat_FDR.Location = new System.Drawing.Point(6, 39);
+            this.textBoxDeleteFlat_FDR.Name = "textBoxDeleteFlat_FDR";
+            this.textBoxDeleteFlat_FDR.Size = new System.Drawing.Size(268, 22);
+            this.textBoxDeleteFlat_FDR.TabIndex = 2;
+            // 
+            // textBoxDeleteEntrance_FDR
+            // 
+            this.textBoxDeleteEntrance_FDR.Location = new System.Drawing.Point(322, 38);
+            this.textBoxDeleteEntrance_FDR.Name = "textBoxDeleteEntrance_FDR";
+            this.textBoxDeleteEntrance_FDR.Size = new System.Drawing.Size(122, 22);
+            this.textBoxDeleteEntrance_FDR.TabIndex = 1;
+            // 
+            // button1
+            // 
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.Location = new System.Drawing.Point(582, 14);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(121, 73);
+            this.button1.TabIndex = 11;
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // FormMain_FDR
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1342, 663);
-            this.Controls.Add(this.groupBoxBriefSummary_FDR);
+            this.Controls.Add(this.groupBoxEvection_FDR);
             this.Controls.Add(this.buttonInfo_FDR);
             this.Controls.Add(this.groupBoxReg_FDR);
             this.Controls.Add(this.buttonOpenFile_FDR);
             this.Controls.Add(this.groupBoxInfoFlat_FDR);
             this.Name = "FormMain_FDR";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Домоуправление";
             this.groupBoxInfoFlat_FDR.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInfoFlat_FDR)).EndInit();
             this.groupBoxReg_FDR.ResumeLayout(false);
             this.groupBoxReg_FDR.PerformLayout();
+            this.groupBoxEvection_FDR.ResumeLayout(false);
+            this.groupBoxEvection_FDR.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -300,8 +372,8 @@ namespace Tyuiu.FaizullinDR.Sprint7.Project.V7
         private System.Windows.Forms.TextBox textBoxSumPeople_FDR;
         private System.Windows.Forms.TextBox textBoxFlatArea_FDR;
         private System.Windows.Forms.TextBox textBoxSumRoom_FDR;
-        private System.Windows.Forms.TextBox textBoxEntrance_FDR;
-        private System.Windows.Forms.TextBox textBoxFlat_FDR;
+        private System.Windows.Forms.TextBox textBoxAddEntrance_FDR;
+        private System.Windows.Forms.TextBox textBoxAddFlat_FDR;
         private System.Windows.Forms.TextBox textBoxFIO_FDR;
         private System.Windows.Forms.RadioButton radioButtonRent_FDR;
         private System.Windows.Forms.Label labelBuyOrRent_FDR;
@@ -309,12 +381,17 @@ namespace Tyuiu.FaizullinDR.Sprint7.Project.V7
         private System.Windows.Forms.Label labelSumRoom_FDR;
         private System.Windows.Forms.Label labelFlatArea_FDR;
         private System.Windows.Forms.Label labelSumPeople_FDR;
-        private System.Windows.Forms.Label labelFlat_FDR;
-        private System.Windows.Forms.Label labelEntrance_FDR;
+        private System.Windows.Forms.Label labelAddFlat_FDR;
+        private System.Windows.Forms.Label labelAddEntrance_FDR;
         private System.Windows.Forms.Label labelFIO_FDR;
         private System.Windows.Forms.Button buttonInfo_FDR;
-        private System.Windows.Forms.SaveFileDialog saveFileDialogNewCitizen_FDR;
-        private System.Windows.Forms.GroupBox groupBoxBriefSummary_FDR;
+        private System.Windows.Forms.OpenFileDialog openFileDialogInfoFlat_FDR;
+        private System.Windows.Forms.GroupBox groupBoxEvection_FDR;
+        private System.Windows.Forms.Label labelDeleteEntrance_FDR;
+        private System.Windows.Forms.Label labelDeleteFlat_FDR;
+        private System.Windows.Forms.TextBox textBoxDeleteFlat_FDR;
+        private System.Windows.Forms.TextBox textBoxDeleteEntrance_FDR;
+        private System.Windows.Forms.Button button1;
     }
 }
 
