@@ -53,11 +53,12 @@ namespace Tyuiu.FaizullinDR.Sprint7.Project.V7
             this.buttonInfo_FDR = new System.Windows.Forms.Button();
             this.openFileDialogInfoFlat_FDR = new System.Windows.Forms.OpenFileDialog();
             this.groupBoxEvection_FDR = new System.Windows.Forms.GroupBox();
+            this.buttonDeletePeople_FDR = new System.Windows.Forms.Button();
             this.labelDeleteEntrance_FDR = new System.Windows.Forms.Label();
             this.labelDeleteFlat_FDR = new System.Windows.Forms.Label();
             this.textBoxDeleteFlat_FDR = new System.Windows.Forms.TextBox();
             this.textBoxDeleteEntrance_FDR = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.saveFileDialogInfoFlat_FDR = new System.Windows.Forms.SaveFileDialog();
             this.groupBoxInfoFlat_FDR.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInfoFlat_FDR)).BeginInit();
             this.groupBoxReg_FDR.SuspendLayout();
@@ -286,7 +287,7 @@ namespace Tyuiu.FaizullinDR.Sprint7.Project.V7
             // groupBoxEvection_FDR
             // 
             this.groupBoxEvection_FDR.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBoxEvection_FDR.Controls.Add(this.button1);
+            this.groupBoxEvection_FDR.Controls.Add(this.buttonDeletePeople_FDR);
             this.groupBoxEvection_FDR.Controls.Add(this.labelDeleteEntrance_FDR);
             this.groupBoxEvection_FDR.Controls.Add(this.labelDeleteFlat_FDR);
             this.groupBoxEvection_FDR.Controls.Add(this.textBoxDeleteFlat_FDR);
@@ -297,6 +298,16 @@ namespace Tyuiu.FaizullinDR.Sprint7.Project.V7
             this.groupBoxEvection_FDR.TabIndex = 5;
             this.groupBoxEvection_FDR.TabStop = false;
             this.groupBoxEvection_FDR.Text = "Выселение жильцов:";
+            // 
+            // buttonDeletePeople_FDR
+            // 
+            this.buttonDeletePeople_FDR.Image = ((System.Drawing.Image)(resources.GetObject("buttonDeletePeople_FDR.Image")));
+            this.buttonDeletePeople_FDR.Location = new System.Drawing.Point(582, 14);
+            this.buttonDeletePeople_FDR.Name = "buttonDeletePeople_FDR";
+            this.buttonDeletePeople_FDR.Size = new System.Drawing.Size(121, 73);
+            this.buttonDeletePeople_FDR.TabIndex = 11;
+            this.buttonDeletePeople_FDR.UseVisualStyleBackColor = true;
+            this.buttonDeletePeople_FDR.Click += new System.EventHandler(this.buttonDeletePeople_FDR_Click);
             // 
             // labelDeleteEntrance_FDR
             // 
@@ -329,15 +340,6 @@ namespace Tyuiu.FaizullinDR.Sprint7.Project.V7
             this.textBoxDeleteEntrance_FDR.Name = "textBoxDeleteEntrance_FDR";
             this.textBoxDeleteEntrance_FDR.Size = new System.Drawing.Size(122, 22);
             this.textBoxDeleteEntrance_FDR.TabIndex = 1;
-            // 
-            // button1
-            // 
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(582, 14);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(121, 73);
-            this.button1.TabIndex = 11;
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // FormMain_FDR
             // 
@@ -391,7 +393,8 @@ namespace Tyuiu.FaizullinDR.Sprint7.Project.V7
         private System.Windows.Forms.Label labelDeleteFlat_FDR;
         private System.Windows.Forms.TextBox textBoxDeleteFlat_FDR;
         private System.Windows.Forms.TextBox textBoxDeleteEntrance_FDR;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonDeletePeople_FDR;
+        private System.Windows.Forms.SaveFileDialog saveFileDialogInfoFlat_FDR;
     }
 }
 

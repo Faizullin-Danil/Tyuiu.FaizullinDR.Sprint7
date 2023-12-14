@@ -69,6 +69,30 @@ namespace Tyuiu.FaizullinDR.Sprint7.Project.V7
                     radioButtonBuy_FDR.Checked = false;
                     radioButtonRent_FDR.Checked = false;
 
+                    string[,] DataMatrix = ds.GetMatrix(path);
+
+                    int rows = DataMatrix.GetLength(0);
+                    int columns = DataMatrix.GetLength(1);
+
+
+                    ///////
+                    for (int r = 0; r <= rows; r++)
+                    {
+                        for (int c = 0; c < columns; c++)
+                        {
+                            dataGridViewInfoFlat_FDR.Rows[r].Cells[c].Value = "";
+                        }
+                    }
+
+                    for (int r = 0; r < rows; r++)
+                    {
+                        for (int c = 0; c < columns; c++)
+                        {
+                            dataGridViewInfoFlat_FDR.Rows[r].Cells[c].Value = DataMatrix[r, c];
+                        }
+                    }
+                    /////////
+
                     MessageBox.Show("Новый житель зарегистрирован!", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
@@ -97,6 +121,59 @@ namespace Tyuiu.FaizullinDR.Sprint7.Project.V7
         {
             FormAbout formAbout = new FormAbout();
             formAbout.ShowDialog();
+        }
+
+        private void buttonDeletePeople_FDR_Click(object sender, EventArgs e)
+        {
+            string path = @"C:\Project\Домоуправление.csv";
+
+            string[] strRows = File.ReadAllLines(path);
+
+            for (int i = 0; i < strRows.Length; i++)
+            {
+                string[] strIndex = strRows[i].Split(';');
+                if ((strIndex[0] == textBoxDeleteEntrance_FDR.Text) && (strIndex[1] == textBoxDeleteFlat_FDR.Text))
+                    strRows[i] = "";
+            }
+            strRows = strRows.Where(i => i != "").ToArray();
+
+
+            File.Delete("Домоуправление.csv");
+
+
+            saveFileDialogInfoFlat_FDR.FileName = "Домоуправление.csv";
+            saveFileDialogInfoFlat_FDR.ShowDialog();
+
+            path = saveFileDialogInfoFlat_FDR.FileName;
+
+            File.WriteAllLines(path, strRows, Encoding.UTF8);
+            
+
+
+            string[,] DataMatrix = ds.GetMatrix(path);
+
+            int rows = DataMatrix.GetLength(0);
+            int columns = DataMatrix.GetLength(1);
+
+            
+            /////
+            for (int r = 0; r <= rows; r++)
+            {
+                for (int c = 0; c < columns; c++)
+                {
+                    dataGridViewInfoFlat_FDR.Rows[r].Cells[c].Value = "";
+                }
+            }
+
+            for (int r = 0; r < rows; r++)
+            {
+                for (int c = 0; c < columns; c++)
+                {
+                    dataGridViewInfoFlat_FDR.Rows[r].Cells[c].Value = DataMatrix[r, c];
+                }
+            }
+            ///////
+
         }
     }
 }
