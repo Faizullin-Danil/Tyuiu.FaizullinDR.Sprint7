@@ -67,7 +67,7 @@ namespace Tyuiu.FaizullinDR.Sprint7.Project.V7
                     textBoxSumPeople_FDR.Text = "";
                     textBoxSumRoom_FDR.Text = "";
                     radioButtonBuy_FDR.Checked = false;
-                    radioButtonRent_FDR.Checked = false;
+                    radioButtonRent_FDR.Checked = false; 
 
                     string[,] DataMatrix = ds.GetMatrix(path);
 
