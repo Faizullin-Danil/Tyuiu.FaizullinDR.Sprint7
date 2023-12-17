@@ -29,6 +29,7 @@ namespace Tyuiu.FaizullinDR.Sprint7.Project.V7
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain_FDR));
             this.groupBoxInfoFlat_FDR = new System.Windows.Forms.GroupBox();
             this.dataGridViewInfoFlat_FDR = new System.Windows.Forms.DataGridView();
@@ -59,6 +60,9 @@ namespace Tyuiu.FaizullinDR.Sprint7.Project.V7
             this.textBoxDeleteFlat_FDR = new System.Windows.Forms.TextBox();
             this.textBoxDeleteEntrance_FDR = new System.Windows.Forms.TextBox();
             this.saveFileDialogInfoFlat_FDR = new System.Windows.Forms.SaveFileDialog();
+            this.buttonQuickGuide_FDR = new System.Windows.Forms.Button();
+            this.buttonStatistic_FDR = new System.Windows.Forms.Button();
+            this.toolTipHelp_FDR = new System.Windows.Forms.ToolTip(this.components);
             this.groupBoxInfoFlat_FDR.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInfoFlat_FDR)).BeginInit();
             this.groupBoxReg_FDR.SuspendLayout();
@@ -102,6 +106,7 @@ namespace Tyuiu.FaizullinDR.Sprint7.Project.V7
             this.buttonOpenFile_FDR.Name = "buttonOpenFile_FDR";
             this.buttonOpenFile_FDR.Size = new System.Drawing.Size(570, 73);
             this.buttonOpenFile_FDR.TabIndex = 0;
+            this.toolTipHelp_FDR.SetToolTip(this.buttonOpenFile_FDR, "Загрузить базу данных дома");
             this.buttonOpenFile_FDR.UseVisualStyleBackColor = true;
             this.buttonOpenFile_FDR.Click += new System.EventHandler(this.buttonOpenFile_FDR_Click);
             // 
@@ -147,6 +152,7 @@ namespace Tyuiu.FaizullinDR.Sprint7.Project.V7
             this.buttonSaveFile_FDR.Name = "buttonSaveFile_FDR";
             this.buttonSaveFile_FDR.Size = new System.Drawing.Size(121, 73);
             this.buttonSaveFile_FDR.TabIndex = 2;
+            this.toolTipHelp_FDR.SetToolTip(this.buttonSaveFile_FDR, "Зарегистрировать нового жильца");
             this.buttonSaveFile_FDR.UseVisualStyleBackColor = true;
             this.buttonSaveFile_FDR.Click += new System.EventHandler(this.buttonSaveFile_FDR_Click);
             // 
@@ -277,6 +283,7 @@ namespace Tyuiu.FaizullinDR.Sprint7.Project.V7
             this.buttonInfo_FDR.Name = "buttonInfo_FDR";
             this.buttonInfo_FDR.Size = new System.Drawing.Size(121, 73);
             this.buttonInfo_FDR.TabIndex = 3;
+            this.toolTipHelp_FDR.SetToolTip(this.buttonInfo_FDR, "Справка");
             this.buttonInfo_FDR.UseVisualStyleBackColor = true;
             this.buttonInfo_FDR.Click += new System.EventHandler(this.buttonInfo_FDR_Click);
             // 
@@ -294,7 +301,7 @@ namespace Tyuiu.FaizullinDR.Sprint7.Project.V7
             this.groupBoxEvection_FDR.Controls.Add(this.textBoxDeleteEntrance_FDR);
             this.groupBoxEvection_FDR.Location = new System.Drawing.Point(621, 371);
             this.groupBoxEvection_FDR.Name = "groupBoxEvection_FDR";
-            this.groupBoxEvection_FDR.Size = new System.Drawing.Size(709, 102);
+            this.groupBoxEvection_FDR.Size = new System.Drawing.Size(709, 280);
             this.groupBoxEvection_FDR.TabIndex = 5;
             this.groupBoxEvection_FDR.TabStop = false;
             this.groupBoxEvection_FDR.Text = "Выселение жильцов:";
@@ -306,6 +313,7 @@ namespace Tyuiu.FaizullinDR.Sprint7.Project.V7
             this.buttonDeletePeople_FDR.Name = "buttonDeletePeople_FDR";
             this.buttonDeletePeople_FDR.Size = new System.Drawing.Size(121, 73);
             this.buttonDeletePeople_FDR.TabIndex = 11;
+            this.toolTipHelp_FDR.SetToolTip(this.buttonDeletePeople_FDR, "Выселить жильца");
             this.buttonDeletePeople_FDR.UseVisualStyleBackColor = true;
             this.buttonDeletePeople_FDR.Click += new System.EventHandler(this.buttonDeletePeople_FDR_Click);
             // 
@@ -341,11 +349,39 @@ namespace Tyuiu.FaizullinDR.Sprint7.Project.V7
             this.textBoxDeleteEntrance_FDR.Size = new System.Drawing.Size(122, 22);
             this.textBoxDeleteEntrance_FDR.TabIndex = 1;
             // 
+            // buttonQuickGuide_FDR
+            // 
+            this.buttonQuickGuide_FDR.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonQuickGuide_FDR.Location = new System.Drawing.Point(1076, 12);
+            this.buttonQuickGuide_FDR.Name = "buttonQuickGuide_FDR";
+            this.buttonQuickGuide_FDR.Size = new System.Drawing.Size(121, 73);
+            this.buttonQuickGuide_FDR.TabIndex = 6;
+            this.buttonQuickGuide_FDR.Text = "Руководство пользователя";
+            this.buttonQuickGuide_FDR.UseVisualStyleBackColor = true;
+            // 
+            // buttonStatistic_FDR
+            // 
+            this.buttonStatistic_FDR.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonStatistic_FDR.Location = new System.Drawing.Point(621, 12);
+            this.buttonStatistic_FDR.Name = "buttonStatistic_FDR";
+            this.buttonStatistic_FDR.Size = new System.Drawing.Size(121, 73);
+            this.buttonStatistic_FDR.TabIndex = 7;
+            this.buttonStatistic_FDR.Text = "Общая информация";
+            this.buttonStatistic_FDR.UseVisualStyleBackColor = true;
+            this.buttonStatistic_FDR.Click += new System.EventHandler(this.buttonStatistic_FDR_Click);
+            // 
+            // toolTipHelp_FDR
+            // 
+            this.toolTipHelp_FDR.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.toolTipHelp_FDR.ToolTipTitle = "Подсказка";
+            // 
             // FormMain_FDR
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1342, 663);
+            this.Controls.Add(this.buttonStatistic_FDR);
+            this.Controls.Add(this.buttonQuickGuide_FDR);
             this.Controls.Add(this.groupBoxEvection_FDR);
             this.Controls.Add(this.buttonInfo_FDR);
             this.Controls.Add(this.groupBoxReg_FDR);
@@ -395,6 +431,9 @@ namespace Tyuiu.FaizullinDR.Sprint7.Project.V7
         private System.Windows.Forms.TextBox textBoxDeleteEntrance_FDR;
         private System.Windows.Forms.Button buttonDeletePeople_FDR;
         private System.Windows.Forms.SaveFileDialog saveFileDialogInfoFlat_FDR;
+        private System.Windows.Forms.Button buttonQuickGuide_FDR;
+        private System.Windows.Forms.Button buttonStatistic_FDR;
+        private System.Windows.Forms.ToolTip toolTipHelp_FDR;
     }
 }
 

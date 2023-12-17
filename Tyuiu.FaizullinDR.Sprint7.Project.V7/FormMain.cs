@@ -69,13 +69,12 @@ namespace Tyuiu.FaizullinDR.Sprint7.Project.V7
                     radioButtonBuy_FDR.Checked = false;
                     radioButtonRent_FDR.Checked = false; 
 
-                    string[,] DataMatrix = ds.GetMatrix(path);
+                    ////////
+                    string[,] DataMatrix = ds.GetMatrix(path); // данные из excel
 
                     int rows = DataMatrix.GetLength(0);
                     int columns = DataMatrix.GetLength(1);
 
-
-                    ///////
                     for (int r = 0; r <= rows; r++)
                     {
                         for (int c = 0; c < columns; c++)
@@ -103,7 +102,7 @@ namespace Tyuiu.FaizullinDR.Sprint7.Project.V7
             openFileDialogInfoFlat_FDR.ShowDialog();
             string FileName = openFileDialogInfoFlat_FDR.FileName;
 
-            string[,] DataMatrix = ds.GetMatrix(FileName);
+            string[,] DataMatrix = ds.GetMatrix(FileName); // данные из excel
 
             int rows = DataMatrix.GetLength(0);
             int columns = DataMatrix.GetLength(1);
@@ -149,14 +148,12 @@ namespace Tyuiu.FaizullinDR.Sprint7.Project.V7
             File.WriteAllLines(path, strRows, Encoding.UTF8);
             
 
-
-            string[,] DataMatrix = ds.GetMatrix(path);
+            /////
+            string[,] DataMatrix = ds.GetMatrix(path); // данные из excel
 
             int rows = DataMatrix.GetLength(0);
             int columns = DataMatrix.GetLength(1);
 
-            
-            /////
             for (int r = 0; r <= rows; r++)
             {
                 for (int c = 0; c < columns; c++)
@@ -174,6 +171,12 @@ namespace Tyuiu.FaizullinDR.Sprint7.Project.V7
             }
             ///////
 
+        }
+
+        private void buttonStatistic_FDR_Click(object sender, EventArgs e)
+        {
+            FormInformation FormInfo = new FormInformation();
+            FormInfo.ShowDialog();
         }
     }
 }
