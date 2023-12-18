@@ -161,9 +161,9 @@ namespace Tyuiu.FaizullinDR.Sprint7.Project.V7
             this.labelSumRoom_FDR.AutoSize = true;
             this.labelSumRoom_FDR.Location = new System.Drawing.Point(477, 64);
             this.labelSumRoom_FDR.Name = "labelSumRoom_FDR";
-            this.labelSumRoom_FDR.Size = new System.Drawing.Size(108, 17);
+            this.labelSumRoom_FDR.Size = new System.Drawing.Size(184, 17);
             this.labelSumRoom_FDR.TabIndex = 13;
-            this.labelSumRoom_FDR.Text = "Кол-во комнат:";
+            this.labelSumRoom_FDR.Text = "Кол-во комнат в квартире:";
             // 
             // labelFlatArea_FDR
             // 
@@ -251,7 +251,7 @@ namespace Tyuiu.FaizullinDR.Sprint7.Project.V7
             // 
             this.textBoxSumRoom_FDR.Location = new System.Drawing.Point(477, 84);
             this.textBoxSumRoom_FDR.Name = "textBoxSumRoom_FDR";
-            this.textBoxSumRoom_FDR.Size = new System.Drawing.Size(122, 22);
+            this.textBoxSumRoom_FDR.Size = new System.Drawing.Size(207, 22);
             this.textBoxSumRoom_FDR.TabIndex = 3;
             // 
             // textBoxAddEntrance_FDR
@@ -265,7 +265,7 @@ namespace Tyuiu.FaizullinDR.Sprint7.Project.V7
             // 
             this.textBoxAddFlat_FDR.Location = new System.Drawing.Point(477, 39);
             this.textBoxAddFlat_FDR.Name = "textBoxAddFlat_FDR";
-            this.textBoxAddFlat_FDR.Size = new System.Drawing.Size(122, 22);
+            this.textBoxAddFlat_FDR.Size = new System.Drawing.Size(207, 22);
             this.textBoxAddFlat_FDR.TabIndex = 1;
             // 
             // textBoxFIO_FDR
@@ -358,6 +358,7 @@ namespace Tyuiu.FaizullinDR.Sprint7.Project.V7
             this.buttonQuickGuide_FDR.TabIndex = 6;
             this.buttonQuickGuide_FDR.Text = "Руководство пользователя";
             this.buttonQuickGuide_FDR.UseVisualStyleBackColor = true;
+            this.buttonQuickGuide_FDR.Click += new System.EventHandler(this.buttonQuickGuide_FDR_Click);
             // 
             // buttonStatistic_FDR
             // 

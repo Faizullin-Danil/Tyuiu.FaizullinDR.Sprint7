@@ -40,11 +40,7 @@ namespace Tyuiu.FaizullinDR.Sprint7.Project.V7
             for (int i = 0; i < strEntrance.Length; i++)
             {
                 chartInfo_FDR.Series[0].Points.AddXY(strEntrance[i], arraySumPeopleInEntrance[i]);
-            }
-
-            
-
-            
+            }                                
         }
 
         private void buttonBuyOrRent_FDR_Click(object sender, EventArgs e)
@@ -64,7 +60,6 @@ namespace Tyuiu.FaizullinDR.Sprint7.Project.V7
             {
                 chartInfo_FDR.Series[0].Points.AddXY(strRentOrBuy[i], ArrayCountBuyOrRent[i]);
             }
-
         }
 
         private void buttonUseFlatAreaAndUseSunRoom_FDR_Click(object sender, EventArgs e)
@@ -78,13 +73,12 @@ namespace Tyuiu.FaizullinDR.Sprint7.Project.V7
 
             int[] ArrayCountUseFlatAreaAndRooms = ds.ArrayUseFlatAreaAndSumRooms(DataTable); // массив кол-во занятой квадратуры и кол-во занятых комнат
 
-            string[] strUseFlatAreaAndRooms = { "Занятая вадратура", "Занятые комнаты" };
+            string[] strUseFlatAreaAndRooms = { "Занятая квадратура", "Занятые комнаты" };
 
             for (int i = 0; i < strUseFlatAreaAndRooms.Length; i++)
             {
                 chartInfo_FDR.Series[0].Points.AddXY(strUseFlatAreaAndRooms[i], ArrayCountUseFlatAreaAndRooms[i]);
             }
-
         }
     }
 }

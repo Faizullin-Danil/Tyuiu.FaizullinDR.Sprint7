@@ -108,5 +108,21 @@ namespace Tyuiu.FaizullinDR.Sprint7.Project.V7.Lib
             }
             return res;
         }
+
+        public bool FlatExist(string path, int Entrance, int Flat)
+        {
+            string[] strLines = File.ReadAllLines(path);
+            bool res = false;
+            for (int i = 1; i < strLines.Length - 1; i++)
+            {
+                string[] strElment = strLines[i].Split(';');
+                for (int j = 0; j < strElment.Length; j++)
+                {
+                    if ((Entrance == Convert.ToInt32(strElment[0])) && (Flat == Convert.ToInt32(strElment[1])))
+                        res = true;
+                }
+            }
+            return res;
+        }
     }
 }
