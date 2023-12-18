@@ -29,23 +29,10 @@ namespace Tyuiu.FaizullinDR.Sprint7.Project.V7.Lib
             }
             return matrix;
         }
-        public object[,] DataTable(string path)
-        {
-            path = @"C:\Project\Домоуправление.csv";
-            string[] strLines = File.ReadAllLines(path);
-            object[,] DataTable = new object[strLines.Length, strLines[0].Split(';').Length];
 
-            for (int i = 0; i < DataTable.GetLength(0); i++)
-            {
-                for (int j = 0; j < DataTable.GetLength(1); j++)
-                {
-                    DataTable[i, j] = strLines[i].Split(';')[j];
-                }
-            }
-            return DataTable;
-        }
 
-        public string[] ArrayStrEntrance(object[,] DataTable)
+
+        public string[] ArrayStrEntrance(string[,] DataTable)
         {
             int flag = 0;
             string strCountEntrance = "";
@@ -71,6 +58,8 @@ namespace Tyuiu.FaizullinDR.Sprint7.Project.V7.Lib
             return res;
         }
 
+
+
         public int[] ArraySumPeopleInEntrance(object[,] DataTable, string[] Entrance)
         {
             int[] res = new int[Entrance.Length];
@@ -85,6 +74,8 @@ namespace Tyuiu.FaizullinDR.Sprint7.Project.V7.Lib
             return res;
         }
 
+
+
         public int[] ArrayCountBuyOrRent(object[,] DataTable)
         {
             int[] res = new int[2];
@@ -98,6 +89,8 @@ namespace Tyuiu.FaizullinDR.Sprint7.Project.V7.Lib
             return res;
         }
 
+
+
         public int[] ArrayUseFlatAreaAndSumRooms(object[,] DataTable)
         {
             int[] res = new int[2];
@@ -108,6 +101,8 @@ namespace Tyuiu.FaizullinDR.Sprint7.Project.V7.Lib
             }
             return res;
         }
+
+
 
         public bool FlatExist(string path, int Entrance, int Flat)
         {
@@ -124,6 +119,8 @@ namespace Tyuiu.FaizullinDR.Sprint7.Project.V7.Lib
             }
             return res;
         }
+
+
 
         public string[,] SortMin(string[,] matrix, int NumberColumn)
         {
@@ -160,6 +157,8 @@ namespace Tyuiu.FaizullinDR.Sprint7.Project.V7.Lib
             }
             return SortMatrix;
         }
+
+
 
         public string[,] SortMax(string[,] matrix, int NumberColumn)
         {

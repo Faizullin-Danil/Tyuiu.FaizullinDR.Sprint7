@@ -31,7 +31,7 @@ namespace Tyuiu.FaizullinDR.Sprint7.Project.V7
             this.chartInfo_FDR.ChartAreas[0].AxisX.Title = "Номер подъезда";
             this.chartInfo_FDR.ChartAreas[0].AxisY.Title = "Количество занятых квартир";
 
-            object[,] DataTable = ds.DataTable(path); // матрица данных из файла
+            string[,] DataTable = ds.GetMatrix(path); // матрица данных из файла
 
             string[] strEntrance = ds.ArrayStrEntrance(DataTable); // номера подъездов
 
@@ -50,7 +50,7 @@ namespace Tyuiu.FaizullinDR.Sprint7.Project.V7
             this.chartInfo_FDR.ChartAreas[0].AxisX.Title = "";
             this.chartInfo_FDR.ChartAreas[0].AxisY.Title = "Количество квартир";
 
-            object[,] DataTable = ds.DataTable(path);
+            string[,] DataTable = ds.GetMatrix(path);
 
             int[] ArrayCountBuyOrRent = ds.ArrayCountBuyOrRent(DataTable); // массив кол-во аренды квартиры и кол-во покупки квартиры
 
@@ -69,7 +69,7 @@ namespace Tyuiu.FaizullinDR.Sprint7.Project.V7
             this.chartInfo_FDR.ChartAreas[0].AxisX.Title = "";
             this.chartInfo_FDR.ChartAreas[0].AxisY.Title = "Количество занятых комнат и занятой квадратуры(м^2)";
 
-            object[,] DataTable = ds.DataTable(path);
+            string[,] DataTable = ds.GetMatrix(path);
 
             int[] ArrayCountUseFlatAreaAndRooms = ds.ArrayUseFlatAreaAndSumRooms(DataTable); // массив кол-во занятой квадратуры и кол-во занятых комнат
 
