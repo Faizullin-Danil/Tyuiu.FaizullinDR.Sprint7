@@ -183,5 +183,89 @@ namespace Tyuiu.FaizullinDR.Sprint7.Project.V7
             FormAbout formAbout = new FormAbout();
             formAbout.ShowDialog();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string[,] DataMatrix = ds.GetMatrix(path);
+            string[,] SortMinDataMatrix = ds.SortMin(DataMatrix,0);
+
+            for (int r = 0; r < SortMinDataMatrix.GetLength(0); r++)
+            {
+                for (int c = 0; c < SortMinDataMatrix.GetLength(1); c++)
+                {
+                    dataGridViewInfoFlat_FDR.Rows[r].Cells[c].Value = SortMinDataMatrix[r, c];
+                }
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string[,] DataMatrix = ds.GetMatrix(path);
+            string[,] SortMinDataMatrix = ds.SortMax(DataMatrix, 0);
+
+            for (int r = 0; r < SortMinDataMatrix.GetLength(0); r++)
+            {
+                for (int c = 0; c < SortMinDataMatrix.GetLength(1); c++)
+                {
+                    dataGridViewInfoFlat_FDR.Rows[r].Cells[c].Value = SortMinDataMatrix[r, c];
+                }
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            string[,] DataMatrix = ds.GetMatrix(path);
+            string[,] SortMinDataMatrix = ds.SortMin(DataMatrix, 3);
+
+            for (int r = 0; r < SortMinDataMatrix.GetLength(0); r++)
+            {
+                for (int c = 0; c < SortMinDataMatrix.GetLength(1); c++)
+                {
+                    dataGridViewInfoFlat_FDR.Rows[r].Cells[c].Value = SortMinDataMatrix[r, c];
+                }
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            string[,] DataMatrix = ds.GetMatrix(path);
+            string[,] SortMinDataMatrix = ds.SortMax(DataMatrix, 3);
+
+            for (int r = 0; r < SortMinDataMatrix.GetLength(0); r++)
+            {
+                for (int c = 0; c < SortMinDataMatrix.GetLength(1); c++)
+                {
+                    dataGridViewInfoFlat_FDR.Rows[r].Cells[c].Value = SortMinDataMatrix[r, c];
+                }
+            }
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            string[,] DataMatrix = ds.GetMatrix(path);
+            string[,] SortMinDataMatrix = ds.SortMin(DataMatrix, 4);
+
+            for (int r = 0; r < SortMinDataMatrix.GetLength(0); r++)
+            {
+                for (int c = 0; c < SortMinDataMatrix.GetLength(1); c++)
+                {
+                    dataGridViewInfoFlat_FDR.Rows[r].Cells[c].Value = SortMinDataMatrix[r, c];
+                }
+            }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            string[,] DataMatrix = ds.GetMatrix(path);
+            string[,] SortMinDataMatrix = ds.SortMax(DataMatrix, 4);
+
+            for (int r = 0; r < SortMinDataMatrix.GetLength(0); r++)
+            {
+                for (int c = 0; c < SortMinDataMatrix.GetLength(1); c++)
+                {
+                    dataGridViewInfoFlat_FDR.Rows[r].Cells[c].Value = SortMinDataMatrix[r, c];
+                }
+            }
+        }
     }
 }

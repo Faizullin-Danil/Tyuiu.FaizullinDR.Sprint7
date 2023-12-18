@@ -63,10 +63,25 @@ namespace Tyuiu.FaizullinDR.Sprint7.Project.V7
             this.buttonQuickGuide_FDR = new System.Windows.Forms.Button();
             this.buttonStatistic_FDR = new System.Windows.Forms.Button();
             this.toolTipHelp_FDR = new System.Windows.Forms.ToolTip(this.components);
+            this.groupBoxFilters_FDR = new System.Windows.Forms.GroupBox();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
             this.groupBoxInfoFlat_FDR.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInfoFlat_FDR)).BeginInit();
             this.groupBoxReg_FDR.SuspendLayout();
             this.groupBoxEvection_FDR.SuspendLayout();
+            this.groupBoxFilters_FDR.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBoxInfoFlat_FDR
@@ -77,7 +92,7 @@ namespace Tyuiu.FaizullinDR.Sprint7.Project.V7
             this.groupBoxInfoFlat_FDR.Controls.Add(this.dataGridViewInfoFlat_FDR);
             this.groupBoxInfoFlat_FDR.Location = new System.Drawing.Point(12, 103);
             this.groupBoxInfoFlat_FDR.Name = "groupBoxInfoFlat_FDR";
-            this.groupBoxInfoFlat_FDR.Size = new System.Drawing.Size(570, 548);
+            this.groupBoxInfoFlat_FDR.Size = new System.Drawing.Size(599, 545);
             this.groupBoxInfoFlat_FDR.TabIndex = 0;
             this.groupBoxInfoFlat_FDR.TabStop = false;
             this.groupBoxInfoFlat_FDR.Text = "Информация о квартирах:";
@@ -94,7 +109,7 @@ namespace Tyuiu.FaizullinDR.Sprint7.Project.V7
             this.dataGridViewInfoFlat_FDR.RowHeadersVisible = false;
             this.dataGridViewInfoFlat_FDR.RowHeadersWidth = 51;
             this.dataGridViewInfoFlat_FDR.RowTemplate.Height = 24;
-            this.dataGridViewInfoFlat_FDR.Size = new System.Drawing.Size(558, 521);
+            this.dataGridViewInfoFlat_FDR.Size = new System.Drawing.Size(587, 518);
             this.dataGridViewInfoFlat_FDR.TabIndex = 0;
             // 
             // buttonOpenFile_FDR
@@ -104,7 +119,7 @@ namespace Tyuiu.FaizullinDR.Sprint7.Project.V7
             this.buttonOpenFile_FDR.Image = ((System.Drawing.Image)(resources.GetObject("buttonOpenFile_FDR.Image")));
             this.buttonOpenFile_FDR.Location = new System.Drawing.Point(12, 12);
             this.buttonOpenFile_FDR.Name = "buttonOpenFile_FDR";
-            this.buttonOpenFile_FDR.Size = new System.Drawing.Size(570, 73);
+            this.buttonOpenFile_FDR.Size = new System.Drawing.Size(599, 73);
             this.buttonOpenFile_FDR.TabIndex = 0;
             this.toolTipHelp_FDR.SetToolTip(this.buttonOpenFile_FDR, "Загрузить базу данных дома");
             this.buttonOpenFile_FDR.UseVisualStyleBackColor = true;
@@ -112,7 +127,7 @@ namespace Tyuiu.FaizullinDR.Sprint7.Project.V7
             // 
             // groupBoxReg_FDR
             // 
-            this.groupBoxReg_FDR.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBoxReg_FDR.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.groupBoxReg_FDR.Controls.Add(this.labelBuyOrRent_FDR);
             this.groupBoxReg_FDR.Controls.Add(this.buttonSaveFile_FDR);
             this.groupBoxReg_FDR.Controls.Add(this.labelSumRoom_FDR);
@@ -129,9 +144,9 @@ namespace Tyuiu.FaizullinDR.Sprint7.Project.V7
             this.groupBoxReg_FDR.Controls.Add(this.textBoxAddEntrance_FDR);
             this.groupBoxReg_FDR.Controls.Add(this.textBoxAddFlat_FDR);
             this.groupBoxReg_FDR.Controls.Add(this.textBoxFIO_FDR);
-            this.groupBoxReg_FDR.Location = new System.Drawing.Point(621, 103);
+            this.groupBoxReg_FDR.Location = new System.Drawing.Point(642, 103);
             this.groupBoxReg_FDR.Name = "groupBoxReg_FDR";
-            this.groupBoxReg_FDR.Size = new System.Drawing.Size(709, 262);
+            this.groupBoxReg_FDR.Size = new System.Drawing.Size(709, 212);
             this.groupBoxReg_FDR.TabIndex = 1;
             this.groupBoxReg_FDR.TabStop = false;
             this.groupBoxReg_FDR.Text = "Регистрация новых жильцов:";
@@ -279,7 +294,7 @@ namespace Tyuiu.FaizullinDR.Sprint7.Project.V7
             // 
             this.buttonInfo_FDR.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonInfo_FDR.Image = ((System.Drawing.Image)(resources.GetObject("buttonInfo_FDR.Image")));
-            this.buttonInfo_FDR.Location = new System.Drawing.Point(1203, 12);
+            this.buttonInfo_FDR.Location = new System.Drawing.Point(1232, 12);
             this.buttonInfo_FDR.Name = "buttonInfo_FDR";
             this.buttonInfo_FDR.Size = new System.Drawing.Size(121, 73);
             this.buttonInfo_FDR.TabIndex = 3;
@@ -293,15 +308,15 @@ namespace Tyuiu.FaizullinDR.Sprint7.Project.V7
             // 
             // groupBoxEvection_FDR
             // 
-            this.groupBoxEvection_FDR.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBoxEvection_FDR.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.groupBoxEvection_FDR.Controls.Add(this.buttonDeletePeople_FDR);
             this.groupBoxEvection_FDR.Controls.Add(this.labelDeleteEntrance_FDR);
             this.groupBoxEvection_FDR.Controls.Add(this.labelDeleteFlat_FDR);
             this.groupBoxEvection_FDR.Controls.Add(this.textBoxDeleteFlat_FDR);
             this.groupBoxEvection_FDR.Controls.Add(this.textBoxDeleteEntrance_FDR);
-            this.groupBoxEvection_FDR.Location = new System.Drawing.Point(621, 371);
+            this.groupBoxEvection_FDR.Location = new System.Drawing.Point(642, 321);
             this.groupBoxEvection_FDR.Name = "groupBoxEvection_FDR";
-            this.groupBoxEvection_FDR.Size = new System.Drawing.Size(709, 280);
+            this.groupBoxEvection_FDR.Size = new System.Drawing.Size(709, 94);
             this.groupBoxEvection_FDR.TabIndex = 5;
             this.groupBoxEvection_FDR.TabStop = false;
             this.groupBoxEvection_FDR.Text = "Выселение жильцов:";
@@ -352,7 +367,7 @@ namespace Tyuiu.FaizullinDR.Sprint7.Project.V7
             // buttonQuickGuide_FDR
             // 
             this.buttonQuickGuide_FDR.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonQuickGuide_FDR.Location = new System.Drawing.Point(1076, 12);
+            this.buttonQuickGuide_FDR.Location = new System.Drawing.Point(1105, 12);
             this.buttonQuickGuide_FDR.Name = "buttonQuickGuide_FDR";
             this.buttonQuickGuide_FDR.Size = new System.Drawing.Size(121, 73);
             this.buttonQuickGuide_FDR.TabIndex = 6;
@@ -363,7 +378,7 @@ namespace Tyuiu.FaizullinDR.Sprint7.Project.V7
             // buttonStatistic_FDR
             // 
             this.buttonStatistic_FDR.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonStatistic_FDR.Location = new System.Drawing.Point(621, 12);
+            this.buttonStatistic_FDR.Location = new System.Drawing.Point(650, 12);
             this.buttonStatistic_FDR.Name = "buttonStatistic_FDR";
             this.buttonStatistic_FDR.Size = new System.Drawing.Size(121, 73);
             this.buttonStatistic_FDR.TabIndex = 7;
@@ -377,11 +392,148 @@ namespace Tyuiu.FaizullinDR.Sprint7.Project.V7
             this.toolTipHelp_FDR.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             this.toolTipHelp_FDR.ToolTipTitle = "Подсказка";
             // 
+            // groupBoxFilters_FDR
+            // 
+            this.groupBoxFilters_FDR.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.groupBoxFilters_FDR.Controls.Add(this.button5);
+            this.groupBoxFilters_FDR.Controls.Add(this.button6);
+            this.groupBoxFilters_FDR.Controls.Add(this.label4);
+            this.groupBoxFilters_FDR.Controls.Add(this.button7);
+            this.groupBoxFilters_FDR.Controls.Add(this.button8);
+            this.groupBoxFilters_FDR.Controls.Add(this.label3);
+            this.groupBoxFilters_FDR.Controls.Add(this.label2);
+            this.groupBoxFilters_FDR.Controls.Add(this.button3);
+            this.groupBoxFilters_FDR.Controls.Add(this.button4);
+            this.groupBoxFilters_FDR.Controls.Add(this.label1);
+            this.groupBoxFilters_FDR.Controls.Add(this.button2);
+            this.groupBoxFilters_FDR.Controls.Add(this.button1);
+            this.groupBoxFilters_FDR.Location = new System.Drawing.Point(642, 421);
+            this.groupBoxFilters_FDR.Name = "groupBoxFilters_FDR";
+            this.groupBoxFilters_FDR.Size = new System.Drawing.Size(709, 224);
+            this.groupBoxFilters_FDR.TabIndex = 8;
+            this.groupBoxFilters_FDR.TabStop = false;
+            this.groupBoxFilters_FDR.Text = "Фильтры";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(9, 51);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(223, 30);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "min";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(9, 87);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(223, 30);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "max";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 31);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(226, 17);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Сортировка по номеру подъезда";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(238, 31);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(212, 17);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Сортировка по кол-ву жителей";
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(241, 87);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(209, 30);
+            this.button3.TabIndex = 4;
+            this.button3.Text = "max";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(241, 51);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(209, 30);
+            this.button4.TabIndex = 3;
+            this.button4.Text = "min";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(456, 31);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(186, 17);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Сортировка по квадратуре";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(6, 120);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(215, 17);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "Сортировка по аренда/покупка";
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(9, 176);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(223, 30);
+            this.button7.TabIndex = 10;
+            this.button7.Text = "сначала покупка";
+            this.button7.UseVisualStyleBackColor = true;
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(9, 140);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(223, 30);
+            this.button8.TabIndex = 9;
+            this.button8.Text = "сначала аренда";
+            this.button8.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(456, 87);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(209, 30);
+            this.button5.TabIndex = 13;
+            this.button5.Text = "max";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(456, 51);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(209, 30);
+            this.button6.TabIndex = 12;
+            this.button6.Text = "min";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
             // FormMain_FDR
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1342, 663);
+            this.ClientSize = new System.Drawing.Size(1371, 660);
+            this.Controls.Add(this.groupBoxFilters_FDR);
             this.Controls.Add(this.buttonStatistic_FDR);
             this.Controls.Add(this.buttonQuickGuide_FDR);
             this.Controls.Add(this.groupBoxEvection_FDR);
@@ -398,6 +550,8 @@ namespace Tyuiu.FaizullinDR.Sprint7.Project.V7
             this.groupBoxReg_FDR.PerformLayout();
             this.groupBoxEvection_FDR.ResumeLayout(false);
             this.groupBoxEvection_FDR.PerformLayout();
+            this.groupBoxFilters_FDR.ResumeLayout(false);
+            this.groupBoxFilters_FDR.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -436,6 +590,20 @@ namespace Tyuiu.FaizullinDR.Sprint7.Project.V7
         private System.Windows.Forms.Button buttonQuickGuide_FDR;
         private System.Windows.Forms.Button buttonStatistic_FDR;
         private System.Windows.Forms.ToolTip toolTipHelp_FDR;
+        private System.Windows.Forms.GroupBox groupBoxFilters_FDR;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
 
