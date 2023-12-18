@@ -170,9 +170,9 @@ namespace Tyuiu.FaizullinDR.Sprint7.Project.V7
             this.labelFlatArea_FDR.AutoSize = true;
             this.labelFlatArea_FDR.Location = new System.Drawing.Point(250, 64);
             this.labelFlatArea_FDR.Name = "labelFlatArea_FDR";
-            this.labelFlatArea_FDR.Size = new System.Drawing.Size(90, 17);
+            this.labelFlatArea_FDR.Size = new System.Drawing.Size(124, 17);
             this.labelFlatArea_FDR.TabIndex = 12;
-            this.labelFlatArea_FDR.Text = "Квадратура:";
+            this.labelFlatArea_FDR.Text = "Квадратура(м^2):";
             // 
             // labelSumPeople_FDR
             // 
@@ -367,6 +367,7 @@ namespace Tyuiu.FaizullinDR.Sprint7.Project.V7
             this.buttonStatistic_FDR.Size = new System.Drawing.Size(121, 73);
             this.buttonStatistic_FDR.TabIndex = 7;
             this.buttonStatistic_FDR.Text = "Общая информация";
+            this.toolTipHelp_FDR.SetToolTip(this.buttonStatistic_FDR, "Графики с информацией о доме");
             this.buttonStatistic_FDR.UseVisualStyleBackColor = true;
             this.buttonStatistic_FDR.Click += new System.EventHandler(this.buttonStatistic_FDR_Click);
             // 

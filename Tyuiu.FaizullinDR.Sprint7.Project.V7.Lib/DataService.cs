@@ -44,6 +44,7 @@ namespace Tyuiu.FaizullinDR.Sprint7.Project.V7.Lib
             }
             return DataTable;
         }
+
         public string[] ArrayStrEntrance(object[,] DataTable)
         {
             int flag = 0;
@@ -68,8 +69,44 @@ namespace Tyuiu.FaizullinDR.Sprint7.Project.V7.Lib
 
 
             return res;
-
         }
-            
+
+        public int[] ArraySumPeopleInEntrance(object[,] DataTable, string[] Entrance)
+        {
+            int[] res = new int[Entrance.Length];
+            for (int i = 0; i < Entrance.Length; i++)
+            {
+                for (int j = 1; j < DataTable.GetLength(0); j++)
+                {
+                    if (Convert.ToInt32(Entrance[i]) == Convert.ToInt32(DataTable[j, 0]))
+                        res[i] += 1;
+                }
+            }
+            return res;
+        }
+
+        public int[] ArrayCountBuyOrRent(object[,] DataTable)
+        {
+            int[] res = new int[2];
+            for (int i = 0; i < DataTable.GetLength(0); i++)
+            {
+                if (Convert.ToString(DataTable[i, 6]) == "аренда")
+                    res[0] += 1;
+                else if (Convert.ToString(DataTable[i, 6]) == "покупка")
+                    res[1] += 1;
+            }
+            return res;
+        }
+
+        public int[] ArrayUseFlatAreaAndSumRooms(object[,] DataTable)
+        {
+            int[] res = new int[2];
+            for (int i = 1; i < DataTable.GetLength(0); i++)
+            {
+                res[0] += Convert.ToInt32(DataTable[i,4]);
+                res[1] += Convert.ToInt32(DataTable[i, 5]);
+            }
+            return res;
+        }
     }
 }

@@ -26,24 +26,65 @@ namespace Tyuiu.FaizullinDR.Sprint7.Project.V7
 
         private void buttonNumberResidents_FDR_Click(object sender, EventArgs e)
         {
+            chartInfo_FDR.Series[0].Points.Clear();
+
             this.chartInfo_FDR.ChartAreas[0].AxisX.Title = "Номер подъезда";
-            this.chartInfo_FDR.ChartAreas[0].AxisY.Title = "Количество";
+            this.chartInfo_FDR.ChartAreas[0].AxisY.Title = "Количество занятых квартир";
+
+            object[,] DataTable = ds.DataTable(path); // матрица данных из файла
+
+            string[] strEntrance = ds.ArrayStrEntrance(DataTable); // номера подъездов
+
+            int[] arraySumPeopleInEntrance = ds.ArraySumPeopleInEntrance(DataTable, strEntrance); // массив количества занятых квартир в каждом подъезде
+
+            for (int i = 0; i < strEntrance.Length; i++)
+            {
+                chartInfo_FDR.Series[0].Points.AddXY(strEntrance[i], arraySumPeopleInEntrance[i]);
+            }
+
+            
+
+            
+        }
+
+        private void buttonBuyOrRent_FDR_Click(object sender, EventArgs e)
+        {
+            chartInfo_FDR.Series[0].Points.Clear();
+
+            this.chartInfo_FDR.ChartAreas[0].AxisX.Title = "";
+            this.chartInfo_FDR.ChartAreas[0].AxisY.Title = "Количество квартир";
 
             object[,] DataTable = ds.DataTable(path);
 
-            string[] strEntrance = ds.ArrayStrEntrance(DataTable);
+            int[] ArrayCountBuyOrRent = ds.ArrayCountBuyOrRent(DataTable); // массив кол-во аренды квартиры и кол-во покупки квартиры
 
-            int startOffset = -2;
-            int endOffset = 2;
+            string[] strRentOrBuy = { "аренда", "покупка" };
 
-            foreach (string numberIntrance in strEntrance)
+            for (int i = 0; i < strRentOrBuy.Length; i++)
             {
-                CustomLabel autoLabel = new CustomLabel(startOffset, endOffset, numberIntrance, 0, LabelMarkStyle.None);
-                chartInfo_FDR.ChartAreas[0].AxisX.CustomLabels.Add(autoLabel);
-                startOffset = startOffset + 1;
-                endOffset = endOffset + 1;
+                chartInfo_FDR.Series[0].Points.AddXY(strRentOrBuy[i], ArrayCountBuyOrRent[i]);
             }
-            chartInfo_FDR.ChartAreas[0].AxisX.LabelStyle.Angle = -90;
+
+        }
+
+        private void buttonUseFlatAreaAndUseSunRoom_FDR_Click(object sender, EventArgs e)
+        {
+            chartInfo_FDR.Series[0].Points.Clear();
+
+            this.chartInfo_FDR.ChartAreas[0].AxisX.Title = "";
+            this.chartInfo_FDR.ChartAreas[0].AxisY.Title = "Количество занятых комнат и занятой квадратуры(м^2)";
+
+            object[,] DataTable = ds.DataTable(path);
+
+            int[] ArrayCountUseFlatAreaAndRooms = ds.ArrayUseFlatAreaAndSumRooms(DataTable); // массив кол-во занятой квадратуры и кол-во занятых комнат
+
+            string[] strUseFlatAreaAndRooms = { "Занятая вадратура", "Занятые комнаты" };
+
+            for (int i = 0; i < strUseFlatAreaAndRooms.Length; i++)
+            {
+                chartInfo_FDR.Series[0].Points.AddXY(strUseFlatAreaAndRooms[i], ArrayCountUseFlatAreaAndRooms[i]);
+            }
+
         }
     }
 }
