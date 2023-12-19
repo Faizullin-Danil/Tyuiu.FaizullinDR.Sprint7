@@ -64,19 +64,18 @@ namespace Tyuiu.FaizullinDR.Sprint7.Project.V7
             this.buttonStatistic_FDR = new System.Windows.Forms.Button();
             this.toolTipHelp_FDR = new System.Windows.Forms.ToolTip(this.components);
             this.groupBoxFilters_FDR = new System.Windows.Forms.GroupBox();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBoxInfoFlat_FDR.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInfoFlat_FDR)).BeginInit();
             this.groupBoxReg_FDR.SuspendLayout();
@@ -414,34 +413,61 @@ namespace Tyuiu.FaizullinDR.Sprint7.Project.V7
             this.groupBoxFilters_FDR.TabStop = false;
             this.groupBoxFilters_FDR.Text = "Фильтры";
             // 
-            // button1
+            // button5
             // 
-            this.button1.Location = new System.Drawing.Point(9, 51);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(223, 30);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "min";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button5.Location = new System.Drawing.Point(456, 87);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(209, 30);
+            this.button5.TabIndex = 13;
+            this.button5.Text = "max";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
-            // button2
+            // button6
             // 
-            this.button2.Location = new System.Drawing.Point(9, 87);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(223, 30);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "max";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button6.Location = new System.Drawing.Point(456, 51);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(209, 30);
+            this.button6.TabIndex = 12;
+            this.button6.Text = "min";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
-            // label1
+            // label4
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 31);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(226, 17);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Сортировка по номеру подъезда";
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(6, 120);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(215, 17);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "Сортировка по аренда/покупка";
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(9, 176);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(223, 30);
+            this.button7.TabIndex = 10;
+            this.button7.Text = "сначала покупка";
+            this.button7.UseVisualStyleBackColor = true;
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(9, 140);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(223, 30);
+            this.button8.TabIndex = 9;
+            this.button8.Text = "сначала аренда";
+            this.button8.UseVisualStyleBackColor = true;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(456, 31);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(186, 17);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Сортировка по квадратуре";
             // 
             // label2
             // 
@@ -472,61 +498,34 @@ namespace Tyuiu.FaizullinDR.Sprint7.Project.V7
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // label3
+            // label1
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(456, 31);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(186, 17);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Сортировка по квадратуре";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 31);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(226, 17);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Сортировка по номеру подъезда";
             // 
-            // label4
+            // button2
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 120);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(215, 17);
-            this.label4.TabIndex = 11;
-            this.label4.Text = "Сортировка по аренда/покупка";
+            this.button2.Location = new System.Drawing.Point(9, 87);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(223, 30);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "max";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button7
+            // button1
             // 
-            this.button7.Location = new System.Drawing.Point(9, 176);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(223, 30);
-            this.button7.TabIndex = 10;
-            this.button7.Text = "сначала покупка";
-            this.button7.UseVisualStyleBackColor = true;
-            // 
-            // button8
-            // 
-            this.button8.Location = new System.Drawing.Point(9, 140);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(223, 30);
-            this.button8.TabIndex = 9;
-            this.button8.Text = "сначала аренда";
-            this.button8.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(456, 87);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(209, 30);
-            this.button5.TabIndex = 13;
-            this.button5.Text = "max";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(456, 51);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(209, 30);
-            this.button6.TabIndex = 12;
-            this.button6.Text = "min";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.button1.Location = new System.Drawing.Point(9, 51);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(223, 30);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "min";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // FormMain_FDR
             // 
@@ -603,7 +602,6 @@ namespace Tyuiu.FaizullinDR.Sprint7.Project.V7
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
 

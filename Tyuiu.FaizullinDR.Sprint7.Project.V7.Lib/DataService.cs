@@ -108,7 +108,7 @@ namespace Tyuiu.FaizullinDR.Sprint7.Project.V7.Lib
         {
             string[] strLines = File.ReadAllLines(path);
             bool res = false;
-            for (int i = 1; i < strLines.Length - 1; i++)
+            for (int i = 1; i < strLines.Length; i++)
             {
                 string[] strElment = strLines[i].Split(';');
                 for (int j = 0; j < strElment.Length; j++)

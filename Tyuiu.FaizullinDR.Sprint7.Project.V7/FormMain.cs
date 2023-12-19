@@ -163,8 +163,11 @@ namespace Tyuiu.FaizullinDR.Sprint7.Project.V7
                             dataGridViewInfoFlat_FDR.Rows[r].Cells[c].Value = DataMatrix[r, c];
                         }
                     }
-                    }
+                    MessageBox.Show("Квартирант выселен", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
+                }
+            textBoxDeleteEntrance_FDR.Text = "";
+            textBoxDeleteFlat_FDR.Text = "";
             }
 
         private void buttonStatistic_FDR_Click(object sender, EventArgs e)
