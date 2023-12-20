@@ -106,6 +106,14 @@ namespace Tyuiu.FaizullinDR.Sprint7.Project.V7
                     dataGridViewInfoFlat_FDR.Rows[r].Cells[c].Value = DataMatrix[r, c];
                 }
             }
+            buttonMaxCountPeople_FDR.Enabled = true;
+            buttonMaxEntrance_FDR.Enabled = true;
+            buttonMaxFlatArea_FDR.Enabled = true;
+            buttonMinCountPeople_FDR.Enabled = true;
+            buttonMinEntrance_FDR.Enabled = true;
+            buttonMinFlatArea_FDR.Enabled = true;
+            buttonBeginRent_FDR.Enabled = true;
+            buttonBeginBuy_FDR.Enabled = true;
         }
 
         
@@ -199,6 +207,7 @@ namespace Tyuiu.FaizullinDR.Sprint7.Project.V7
                     dataGridViewInfoFlat_FDR.Rows[r].Cells[c].Value = SortMinDataMatrix[r, c];
                 }
             }
+            buttonBack_FDR.Enabled = true;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -213,6 +222,7 @@ namespace Tyuiu.FaizullinDR.Sprint7.Project.V7
                     dataGridViewInfoFlat_FDR.Rows[r].Cells[c].Value = SortMinDataMatrix[r, c];
                 }
             }
+            buttonBack_FDR.Enabled = true;
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -227,6 +237,7 @@ namespace Tyuiu.FaizullinDR.Sprint7.Project.V7
                     dataGridViewInfoFlat_FDR.Rows[r].Cells[c].Value = SortMinDataMatrix[r, c];
                 }
             }
+            buttonBack_FDR.Enabled = true;
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -241,6 +252,7 @@ namespace Tyuiu.FaizullinDR.Sprint7.Project.V7
                     dataGridViewInfoFlat_FDR.Rows[r].Cells[c].Value = SortMinDataMatrix[r, c];
                 }
             }
+            buttonBack_FDR.Enabled = true;
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -255,6 +267,7 @@ namespace Tyuiu.FaizullinDR.Sprint7.Project.V7
                     dataGridViewInfoFlat_FDR.Rows[r].Cells[c].Value = SortMinDataMatrix[r, c];
                 }
             }
+            buttonBack_FDR.Enabled = true;
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -263,10 +276,57 @@ namespace Tyuiu.FaizullinDR.Sprint7.Project.V7
             string[,] SortMinDataMatrix = ds.SortMax(DataMatrix, 4);
 
             for (int r = 0; r < SortMinDataMatrix.GetLength(0); r++)
+           {
+                for (int c = 0; c < SortMinDataMatrix.GetLength(1); c++)
+                {
+                    dataGridViewInfoFlat_FDR.Rows[r].Cells[c].Value = SortMinDataMatrix[r, c];
+                }
+            }
+            buttonBack_FDR.Enabled = true;
+        }
+
+        private void buttonBeginRent_FDR_Click(object sender, EventArgs e)
+        {
+            string[,] DataMatrix = ds.GetMatrix(path);
+            string[,] SortMaxDataMatrix = ds.SortBeginRent(DataMatrix, 6);
+
+            for (int r = 0; r < SortMaxDataMatrix.GetLength(0); r++)
+            {
+                for (int c = 0; c < SortMaxDataMatrix.GetLength(1); c++)
+                {
+                    dataGridViewInfoFlat_FDR.Rows[r].Cells[c].Value = SortMaxDataMatrix[r, c];
+                }
+            }
+            buttonBack_FDR.Enabled = true;
+        }
+
+        private void buttonBeginBuy_FDR_Click(object sender, EventArgs e)
+        {
+            string[,] DataMatrix = ds.GetMatrix(path);
+            string[,] SortMinDataMatrix = ds.SortBeginBuy(DataMatrix, 6);
+
+            for (int r = 0; r < SortMinDataMatrix.GetLength(0); r++)
             {
                 for (int c = 0; c < SortMinDataMatrix.GetLength(1); c++)
                 {
                     dataGridViewInfoFlat_FDR.Rows[r].Cells[c].Value = SortMinDataMatrix[r, c];
+                }
+            }
+            buttonBack_FDR.Enabled = true;
+        }
+
+        private void buttonBack_FDR_Click(object sender, EventArgs e)
+        {
+            string[,] DataMatrix = ds.GetMatrix(path);
+
+            int rows = DataMatrix.GetLength(0);
+            int columns = DataMatrix.GetLength(1);
+
+            for (int r = 0; r < rows; r++)
+            {
+                for (int c = 0; c < columns; c++)
+                {
+                    dataGridViewInfoFlat_FDR.Rows[r].Cells[c].Value = DataMatrix[r, c];
                 }
             }
         }

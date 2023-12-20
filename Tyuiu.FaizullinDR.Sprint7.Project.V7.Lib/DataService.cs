@@ -195,5 +195,95 @@ namespace Tyuiu.FaizullinDR.Sprint7.Project.V7.Lib
             }
             return SortMatrix;
         }
+
+        public string[,] SortBeginBuy(string[,] matrix, int NumberColumn)
+        {
+            string[,] SortMatrix = new string[matrix.GetLength(0), matrix.GetLength(1)];
+
+            for (int i = 0; i < SortMatrix.GetLength(1); i++)
+            {
+                SortMatrix[0, i] = matrix[0, i];
+            }
+
+            int count = 0;
+            for (int i = 0; i < SortMatrix.GetLength(0) - 1; i++)
+            {
+                for (int j = 1; j < matrix.GetLength(0); j++)
+                {
+                    if (("покупка" == matrix[j, NumberColumn]) && (matrix[j, NumberColumn] != "-1"))
+                    {
+                        for (int c = 0; c < SortMatrix.GetLength(1); c++)
+                        {
+                            SortMatrix[i + 1, c] = matrix[j, c];
+                        }
+                        matrix[j, NumberColumn] = "-1";
+                        count++;
+                        break;
+                    }
+                }
+            }
+
+            for (int i = count; i < SortMatrix.GetLength(0); i++)
+            {
+                for (int j = 1; j < matrix.GetLength(0); j++)
+                {
+                    if (matrix[j, NumberColumn] != "-1")
+                    {
+                        for (int c = 0; c < SortMatrix.GetLength(1); c++)
+                        {
+                            SortMatrix[i + 1, c] = matrix[j, c];
+                        }
+                        matrix[j, NumberColumn] = "-1";
+                        break;
+                    }
+                }
+            }
+            return SortMatrix;
+        }
+
+        public string[,] SortBeginRent(string[,] matrix, int NumberColumn)
+        {
+            string[,] SortMatrix = new string[matrix.GetLength(0), matrix.GetLength(1)];
+
+            for (int i = 0; i < SortMatrix.GetLength(1); i++)
+            {
+                SortMatrix[0, i] = matrix[0, i];
+            }
+
+            int count = 0;
+            for (int i = 0; i < SortMatrix.GetLength(0) - 1; i++)
+            {
+                for (int j = 1; j < matrix.GetLength(0); j++)
+                {
+                    if ((matrix[j, NumberColumn] == "аренда") && (matrix[j, NumberColumn] != "-1"))
+                    {
+                        for (int c = 0; c < SortMatrix.GetLength(1); c++)
+                        {
+                            SortMatrix[i + 1, c] = matrix[j, c];
+                        }
+                        matrix[j, NumberColumn] = "-1";
+                        count++;
+                        break;
+                    }
+                }
+            }
+
+            for (int i = count; i < SortMatrix.GetLength(0); i++)
+            {
+                for (int j = 1; j < matrix.GetLength(0); j++)
+                {
+                    if (matrix[j, NumberColumn] != "-1")
+                    {
+                        for (int c = 0; c < SortMatrix.GetLength(1); c++)
+                        {
+                            SortMatrix[i + 1, c] = matrix[j, c];
+                        }
+                        matrix[j, NumberColumn] = "-1";
+                        break;
+                    }
+                }
+            }
+            return SortMatrix;
+        }
     }
 }

@@ -41,7 +41,7 @@ namespace Tyuiu.FaizullinDR.Sprint7.Project.V7
             this.labelQuickGuide_FDR.AutoSize = true;
             this.labelQuickGuide_FDR.Location = new System.Drawing.Point(12, 9);
             this.labelQuickGuide_FDR.Name = "labelQuickGuide_FDR";
-            this.labelQuickGuide_FDR.Size = new System.Drawing.Size(869, 493);
+            this.labelQuickGuide_FDR.Size = new System.Drawing.Size(869, 527);
             this.labelQuickGuide_FDR.TabIndex = 0;
             this.labelQuickGuide_FDR.Text = resources.GetString("labelQuickGuide_FDR.Text");
             // 
@@ -49,7 +49,7 @@ namespace Tyuiu.FaizullinDR.Sprint7.Project.V7
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(961, 497);
+            this.ClientSize = new System.Drawing.Size(961, 535);
             this.Controls.Add(this.labelQuickGuide_FDR);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
